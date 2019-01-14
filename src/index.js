@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const CWLogsWritable = require('cwlogs-writable')
 
 const [groupName, baseName, accessKey, secretKey] = process.argv.slice(2)
@@ -7,12 +9,7 @@ if (!groupName || !baseName || !accessKey || !secretKey) {
     process.exit(1)
 }
 
-const streamName =
-    baseName +
-    '-' +
-    Date.now() +
-    '/' +
-    Math.round(Math.random() * 4026531839 + 268435456).toString(16)
+const streamName = baseName + '-' + Date.now() + '/' + Math.round(Math.random() * 4026531839 + 268435456).toString(16)
 
 const cwstream = new CWLogsWritable({
     logGroupName: groupName,

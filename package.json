@@ -1,11 +1,33 @@
 {
-  "name": "send-logs",
-  "version": "1.0.0",
-  "description": "Send logs to AWS CloudWatch",
-  "main": "src/index.js",
-  "author": "Alexis Ablain",
-  "license": "MIT",
-  "dependencies": {
-    "cwlogs-writable": "^1.0.0"
-  }
+    "name": "@alexisab/send-logs",
+    "version": "1.0.0",
+    "description": "Send logs to AWS CloudWatch",
+    "main": "lib/index.js",
+    "bin": {
+        "send-logs": "./lib/index.js"
+    },
+    "scripts": {
+        "build": "babel src -d lib",
+        "prepublishOnly": "npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alexisab/send-logs.git"
+    },
+    "bugs": {
+        "url": "https://github.com/alexisab/send-logs/issues"
+    },
+    "homepage": "https://github.com/alexisab/send-logs#readme",
+    "author": "Alexis Ablain",
+    "license": "MIT",
+    "dependencies": {
+        "cwlogs-writable": "^1.0.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.2.3",
+        "@babel/core": "^7.2.2",
+        "@babel/preset-env": "^7.2.3",
+        "eslint": "^5.12.0",
+        "prettier": "^1.15.3"
+    }
 }
