@@ -1,0 +1,11 @@
+{
+  "name": "send-logs",
+  "version": "1.0.0",
+  "description": "Send logs to AWS CloudWatch",
+  "main": "src/index.js",
+  "author": "Alexis Ablain",
+  "license": "MIT",
+  "dependencies": {
+    "cwlogs-writable": "^1.0.0"
+  }
+}
